@@ -28,7 +28,8 @@ public class UserServiceImpl implements UserService {
 			System.out.println("Error:No User Defined" + "\n");
 		}
 
-		if (checkUser.getUserRole().equalsIgnoreCase("Faculty")||checkUser.getUserRole().equalsIgnoreCase("Faculty-TPC")) {
+		if (checkUser.getUserRole().equalsIgnoreCase("Faculty")
+				|| checkUser.getUserRole().equalsIgnoreCase("Faculty-TPC")) {
 			System.out.println("Before update Faculty Role : " + checkUser.getUserRole() + "\n");
 			checkUser.setUserRole("TPO");
 			System.out.println("After update Faculty Role : " + checkUser.getUserRole() + "\n");

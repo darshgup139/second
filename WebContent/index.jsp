@@ -9,21 +9,18 @@
 <body>
 	<table border="1">
 		<tr>
-			<th>Create User</th>
-			<td><a href="/AddTPO/InsertUser">Click Here To
-					Assign TPO</a></td>
+			<th>Assign TPO</th>
+			<td><a href="/AddTPO/InsertUser">Click Here To Assign TPO</a></td>
 		</tr>
 		<tr>
 			<th>View User</th>
-			<td><a href="/AddTPO/ViewUsers">Click Here
-					To View TPO</a></td>
+			<td><a href="/AddTPO/ViewUsers">Click Here To View Users</a></td>
 		</tr>
 		<tr>
-			<th>Delete User</th>
-			<td><a href="/AddTPO/DeleteUser">Click Here To
-					Remove TPO</a></td>
+			<th>Remove TPO</th>
+			<td><a href="/AddTPO/DeleteUser">Click Here To Remove TPO</a></td>
 		</tr>
-		
+
 	</table>
 </body>
 </html>
