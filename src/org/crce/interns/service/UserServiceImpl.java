@@ -20,7 +20,7 @@ public class UserServiceImpl implements UserService {
 		User user = new User();
 		User checkUser = new User();
 		BeanUtils.copyProperties(userBean, user);
-		checkUser.setUserName(userBean.getUserName());
+		checkUser.setUsername(userBean.getUsername());
 
 		checkUser = userDao.getUser(checkUser);
 
@@ -28,11 +28,11 @@ public class UserServiceImpl implements UserService {
 			System.out.println("Error:No User Defined" + "\n");
 		}
 
-		if (checkUser.getUserRole().equalsIgnoreCase("Faculty")
-				|| checkUser.getUserRole().equalsIgnoreCase("Faculty-TPC")) {
-			System.out.println("Before update Faculty Role : " + checkUser.getUserRole() + "\n");
-			checkUser.setUserRole("TPO");
-			System.out.println("After update Faculty Role : " + checkUser.getUserRole() + "\n");
+		if (checkUser.getRole_id().equalsIgnoreCase("2")
+				|| checkUser.getRole_id().equalsIgnoreCase("4")) {
+			System.out.println("Before update Faculty Role ID : " + checkUser.getRole_id() + "\n");
+			checkUser.setRole_id("5");
+			System.out.println("After update Faculty Role ID : " + checkUser.getRole_id() + "\n");
 			userDao.insertUser(checkUser);
 		}
 
@@ -64,7 +64,7 @@ public class UserServiceImpl implements UserService {
 		User user = new User();
 		User checkUser = new User();
 		BeanUtils.copyProperties(userBean, user);
-		checkUser.setUserName(userBean.getUserName());
+		checkUser.setUsername(userBean.getUsername());
 
 		checkUser = userDao.getUser(checkUser);
 
@@ -72,10 +72,10 @@ public class UserServiceImpl implements UserService {
 			System.out.println("Error:No User Defined" + "\n");
 		}
 
-		if (checkUser.getUserRole().equalsIgnoreCase("TPO")) {
-			System.out.println("Before update Faculty Role : " + checkUser.getUserRole() + "\n");
-			checkUser.setUserRole("Faculty");
-			System.out.println("After update Faculty Role : " + checkUser.getUserRole() + "\n");
+		if (checkUser.getRole_id().equalsIgnoreCase("5")) {
+			System.out.println("Before update Faculty Role : " + checkUser.getRole_id() + "\n");
+			checkUser.setRole_id("2");
+			System.out.println("After update Faculty Role : " + checkUser.getRole_id() + "\n");
 			userDao.insertUser(checkUser);
 		}
 

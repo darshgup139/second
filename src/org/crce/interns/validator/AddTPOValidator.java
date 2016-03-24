@@ -18,9 +18,9 @@ public class AddTPOValidator implements Validator {
 	public void validate(Object obj, Errors errors) {
 		// TODO Auto-generated method stub
 		UserBean userBean = (UserBean) obj;
-		System.out.println(userBean.getUserName() + " : User Name in Validator");
-		System.out.println(userBean.getUserRole() + " : User Role in Validator");
-		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "userName", "userName.required");
+		System.out.println(userBean.getUsername() + " : User Name in Validator");
+		System.out.println(userBean.getRole_id() + " : User Role ID in Validator");
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "username.required");
 	}
 
 }

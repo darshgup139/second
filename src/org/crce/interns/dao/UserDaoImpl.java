@@ -29,8 +29,8 @@ public class UserDaoImpl implements UserDao {
 
 	public User getUser(User checkUser) {
 		// TODO Auto-generated method stub
-		String userName = checkUser.getUserName();
-		User user = (User) entityManager.createQuery("select u from User u where u.userName = :n")
+		String userName = checkUser.getUsername();
+		User user = (User) entityManager.createQuery("select u from User u where u.username = :n")
 				.setParameter("n", userName).getSingleResult();
 		return user;
 	}
